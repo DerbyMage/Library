@@ -5,4 +5,7 @@ function book(title, author, pages, read) {
     this.read = read
 }
 
-console.log(book('red fern', 'old white nigga', '222', 'cant remember')
+
+function addBook(){
+    const library = document.querySelector('.library')
+}
