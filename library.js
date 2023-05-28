@@ -61,6 +61,10 @@ function divCreator() {
         const pNode = document.createElement('div')
         const rNode = document.createElement('div')
         const bNode = document.createElement('div')
+        const inp = document.createElement('input')
+        inp.setAttribute('type', 'checkbox')
+        inp.setAttribute('id', 'check')
+        inp.setAttribute('data-num', `${x}`)
         const btn = document.createElement('button')
         bNode.setAttribute('class', 'book')
         tNode.setAttribute('class', 'book')
@@ -80,12 +84,21 @@ function divCreator() {
         aNode.textContent = libArray[x].author
         pNode.textContent = libArray[x].pages
         rNode.textContent = libArray[x].read
+        rNode.appendChild(inp)
     
         library.appendChild(tNode)
         library.appendChild(aNode)
         library.appendChild(pNode)
         library.appendChild(rNode)
         library.appendChild(bNode)  
-        bNode.addEventListener('click', remove)  
+        bNode.addEventListener('click', remove) 
+        inp.addEventListener('click', toggleRead) 
 }
+}
+
+function toggleRead(e) {
+    const targ = e.target.dataset.num
+    libArray[targ].read === 'No' ? libArray[targ].read = 'Yes' : libArray[targ].read = 'No'
+ console.log(targ)
+ divCreator()
 }
