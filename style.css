@@ -30,13 +30,15 @@
     grid-template-columns: repeat(4, 200px);
 }
 .library > div {
+    font-size: 22px;
+    font-weight: bold;
     /* border-right: 1px solid black; */
     /* border-top: 1px solid #000; */
     border: 1px solid black;;
 }
 
 .library > class {
-border: 1px solid black
+    border: 1px solid black
 }
 .library > class:hover {
     background-color: gold;
