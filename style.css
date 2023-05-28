@@ -24,7 +24,31 @@
 }
 
 .library {
+    margin-top: 15px;
+    /* border: 2px solid brown; */
     display: grid;
+    grid-template-columns: repeat(4, 200px);
+}
+.library > div {
+    /* border-right: 1px solid black; */
+    /* border-top: 1px solid #000; */
+    border: 1px solid black;;
+}
+
+.library > class {
+border: 1px solid black
+}
+.library > class:hover {
+    background-color: gold;
+    transform: scale(1.2) ;
+
+    box-shadow: 3px 2px 1px 3px;
+    cursor: pointer;
+}
+
+.library > div:hover {
+    background-color: gold;
+    transform: scale(1.03);
 }
 
 button {

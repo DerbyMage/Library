@@ -1,3 +1,5 @@
+const libArray = []
+
 function book(title, author, pages, read) {
     this.title = title
     this.author = author
@@ -9,12 +11,33 @@ function book(title, author, pages, read) {
 function addBook(){
     const library = document.querySelector('.library')
 
-    const title = document.querySelector('.title').textContent
-    const author = document.querySelector('.author').textContent
-    const pages = document.querySelector('.pages').textContent
-    const read = document.querySelector('.read').textContent
+    const title = document.getElementById('title').value
+    const author = document.getElementById('author').value
+    const pages = document.getElementById('pages').value
+    const read = document.getElementById('read').value
+    const newer = new book(title, author, pages, read)
+    libArray.push(newer)
+    const tNode = document.createElement('class')
+    const aNode = document.createElement('class')
+    const pNode = document.createElement('class')
+    const rNode = document.createElement('class')
+    tNode.textContent = title
+    aNode.textContent = author
+    pNode.textContent = pages
+    rNode.textContent = read
+    library.appendChild(tNode)
+    library.appendChild(aNode)
+    library.appendChild(pNode)
+    library.appendChild(rNode)
 
-    new book(title, author, pages, read)
+    document.getElementById('title').value = ''
+    document.getElementById('author').value = ''
+    document.getElementById('pages').value = ''
+    document.getElementById('read').value = ''
+    
+
+
+
 }
 
 function newBook() {
