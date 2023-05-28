@@ -37,10 +37,13 @@
     border: 1px solid black;;
 }
 
-.library > class {
+.library > .book {
+    font-size:18;
+    font-weight: normal;
     border: 1px solid black
 }
-.library > class:hover {
+.library > .book:hover {
+    font-weight: bold;
     background-color: gold;
     transform: scale(1.2) ;
 
