@@ -27,7 +27,7 @@
     margin-top: 15px;
     /* border: 2px solid brown; */
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(5, 180px);
 }
 .library > div {
     font-size: 22px;
@@ -38,22 +38,32 @@
 }
 
 .library > .book {
+    display: flex;
+    justify-content: center;
+    
     font-size:18;
     font-weight: normal;
     border: 1px solid black
 }
 .library > .book:hover {
     font-weight: bold;
-    background-color: gold;
-    transform: scale(1.2) ;
+    /* background-color: gold; */
+    /* transform: scale(1.2) ; */
 
     box-shadow: 3px 2px 1px 3px;
+    /* cursor: pointer; */
+}
+
+.library > div:last-child > button:hover {
+    background-color: gold;
+    transform: scale(1.07);
     cursor: pointer;
 }
 
-.library > div:hover {
-    background-color: gold;
-    transform: scale(1.03);
+.library > div > button {
+    background-color: aqua;
+    height:45px;
+    width: 100px;
 }
 
 button {

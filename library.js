@@ -25,7 +25,7 @@ function addBook(){
     const read = document.getElementById('read').value
     const newer = new Book(title, author, pages, read)
     libArray.push(newer)
-   while(library.childElementCount > 4) {
+   while(library.childElementCount > 5) {
     library.removeChild(library.lastElementChild)
 
    }
@@ -34,18 +34,30 @@ function addBook(){
     const aNode = document.createElement('div')
     const pNode = document.createElement('div')
     const rNode = document.createElement('div')
+    const bNode = document.createElement('div')
+    const btn = document.createElement('button')
+    bNode.setAttribute('class', 'book')
     tNode.setAttribute('class', 'book')
     aNode.setAttribute('class', 'book')
     pNode.setAttribute('class', 'book')
     rNode.setAttribute('class', 'book')
+    bNode.setAttribute('data-num', `${x}`)
+    tNode.setAttribute('data-num', `${x}`)
+    aNode.setAttribute('data-num', `${x}`)
+    pNode.setAttribute('data-num', `${x}`)
+    rNode.setAttribute('data-num', `${x}`)
+    btn.textContent = 'Click to Remove'
+    bNode.appendChild(btn)
     tNode.textContent = libArray[x].title
     aNode.textContent = libArray[x].author
     pNode.textContent = libArray[x].pages
     rNode.textContent = libArray[x].read
+
     library.appendChild(tNode)
     library.appendChild(aNode)
     library.appendChild(pNode)
     library.appendChild(rNode)
+    library.appendChild(bNode)
 
     document.getElementById('title').value = ''
     document.getElementById('author').value = ''
