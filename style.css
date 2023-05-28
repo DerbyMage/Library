@@ -1,7 +1,8 @@
 .add {
+    display: none;
     width: 400px;
     height: 250px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     border:1px solid black;
     /* text-align: right; */
@@ -12,6 +13,29 @@
     /* text-align: right; */
 }
 
+
+.add label {
+    color: blue;
+    align-self: right;
+}
+.add button {
+    margin-top: 20px;
+    align-self: center;
+}
+
 .library {
     display: grid;
+}
+
+button {
+    background-color: rgb(53, 219, 53);
+    width: 180px;
+    height: 60px;
+    border-radius: 14px;;
+}
+
+#new-book:hover {
+    background-color: rgba(128, 173, 24, 0.76);
+    cursor: pointer;
+    transform: scale(1.1);
 }
