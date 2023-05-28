@@ -54,7 +54,7 @@
     /* cursor: pointer; */
 }
 
-.library > div:last-child > button:hover {
+.library > .book > button:hover {
     background-color: gold;
     transform: scale(1.07);
     cursor: pointer;
