@@ -66,7 +66,7 @@ function divCreator() {
         inp.setAttribute('id', 'check')
         inp.setAttribute('data-num', `${x}`)
         const btn = document.createElement('button')
-        bNode.setAttribute('class', 'book')
+        bNode.setAttribute('class', 'remove')
         tNode.setAttribute('class', 'book')
         aNode.setAttribute('class', 'book')
         pNode.setAttribute('class', 'book')
