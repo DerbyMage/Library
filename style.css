@@ -58,14 +58,7 @@ body {
     font-weight: normal;
     border: 1px solid black
 }
-.library > .book:hover {
-    font-weight: bold;
-    /* background-color: gold; */
-    /* transform: scale(1.2) ; */
 
-    box-shadow: 3px 2px 1px 3px;
-    /* cursor: pointer; */
-}
 
 .library > .book > button:hover {
     background-color: gold;
@@ -74,7 +67,7 @@ body {
 }
 
 .library > div > button {
-    background-color: aqua;
+    background-color: rgba(181, 10, 10, 0.54);
     height:45px;
     width: 100px;
 }

@@ -99,6 +99,6 @@ function divCreator() {
 function toggleRead(e) {
     const targ = e.target.dataset.num
     libArray[targ].read === 'No' ? libArray[targ].read = 'Yes' : libArray[targ].read = 'No'
- console.log(targ)
+ console.log(libArray[targ])
  divCreator()
 }
