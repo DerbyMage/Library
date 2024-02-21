@@ -1,4 +1,5 @@
 const libArray = []
+const library = document.querySelector('.library')
 
 function divCreator() {
 
@@ -42,7 +43,11 @@ function divCreator() {
         library.appendChild(pNode)
         library.appendChild(rNode)
         library.appendChild(bNode)  
-        // bNode.addEventListener('click', remove) 
+        bNode.addEventListener('click', remove) 
+        rNode.addEventListener('click', toggleRead)
+
+        
+        
     }}
 
 function newBook() {
@@ -66,6 +71,11 @@ const newer = new Book(title, author, pages, read)
 libArray.push(newer)
 console.log(newer)
 divCreator()
+titleValue.value = ''
+authorValue.value =''
+pagesValue.value = ''
+readValue.value =  ''
+
 
 }
 
@@ -125,5 +135,22 @@ class Book {
     }
 }
 
-const library = document.querySelector('.library')
+function toggleRead(e) {
+    const targ = e.target.dataset.num
+    // libArray[targ].read === 'No' ? libArray[targ].read = 'Yes' : libArray[targ].read = 'No'
+    libArray[targ].readBook()
+//  console.log(libArray[targ])
+ divCreator()
+}
+
+function remove(num) {
+    // const library = document.querySelector('.library')
+    console.log(num)
+    console.log(num.target.dataset.num)
+    const numb = (num.target.dataset.num)
+    libArray.splice(numb, 1)
+    divCreator()
+
+}
+
 
